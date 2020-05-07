@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>CalS</title>
+		<link href="cals.css" rel="stylesheet">
+		</head>
+	<body>
+		<form name="cals" placeholder="0">
+		<div class="main" id="container">
+			<div id="calculator">
+			<div id="result">
+				<div id="history">
+				<input type="text" name="histo" id="history-value" >
+				</div>
+				<div id="display">
+					<input type="text" name="screen" id="display-value" value="0">
+				</div>
+			</div>
+			<div id="keyboard">
+			<table>
+				<tr>
+					<td><button type="button" class="operator" id="clear" onclick="document.cals.screen.value=''; document.cals.histo.value='0'">AC</button></td>
+					<td><button type="button" class="operator" id="backspace" onclick="back()">C</button></td>
+					<td><button type="button"class="operator" id="%" onclick="document.cals.screen.value+='%'">%</button></td>
+					<td><button type="button" class="operator" id="/" onclick="document.cals.screen.value+='/'">&#247</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="number" id="7" onclick="document.cals.screen.value+='7'">7</button></td>
+					<td><button type="button" class="number" id="8" onclick="document.cals.screen.value+='8'">8</button></td>
+					<td><button type="button" class="number" id="9" onclick="document.cals.screen.value+='9'">9</button></td>
+					<td><button type="button" class="operator" id="*" onclick="document.cals.screen.value+='*'">&times</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="number" id="4" onclick="document.cals.screen.value+='4'">4</button></td>
+					<td><button type="button" class="number" id="5" onclick="document.cals.screen.value+='5'">5</button></td>
+					<td><button type="button" class="number" id="6" onclick="document.cals.screen.value+='6'">6</button></td>
+					<td><button type="button" class="operator" id="-" onclick="document.cals.screen.value+='-'">-</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="number" id="1" onclick="document.cals.screen.value+='1'">1</button></td>
+					<td><button type="button" class="number" id="2" onclick="document.cals.screen.value+='2'">2</button></td>
+					<td><button type="button" class="number" id="3" onclick="document.cals.screen.value+='3'">3</button></td>
+					<td><button type="button" class="operator" id="+" onclick="document.cals.screen.value+='+'">+</button></td>
+				</tr>
+				<tr>
+					<td colspan="2"><button type="button" class="number" id="0" style="width:150px;" onclick="document.cals.screen.value+='0'">0</button></td>
+					<td><button type="button" class="operator" id="." onclick="document.cals.screen.value+='.'">.</button></td>
+					<td><button type="button" class="operator" id="=" onclick="result(document.cals.screen.value)">=</button></td>
+				</tr>
+			</table>
+			</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
